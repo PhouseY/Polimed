@@ -79,7 +79,7 @@ class Login_Polimed:
         self.fcursor = self.bd.cursor()
         
         self.fcursor.execute("SELECT Contra FROM tablausuarios WHERE Usuarios='"+self.NombreUsuario.get()+"'and Contra='"+self.ContrasenaUsuario.get()+"'")
-        
+    ####################### Definir Funciones de nuevas Ventana ####################################     
         if self.fcursor.fetchall():
             self.ventana2 = Toplevel()
             w, h = self.ventana2.winfo_screenwidth(), self.ventana2.winfo_screenheight()
@@ -101,9 +101,8 @@ class Login_Polimed:
     def Cerrar_ventana(self):
         self.ventana.destroy()
     
-        ####################### Definir Funciones de nuevas Ventana ####################################
-    #def segunda_Ventana(self):
-        
+       
+   
         
         
 ############## HERENCIA DE VENTANA Y MAINLOOP#############################
